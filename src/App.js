@@ -24,8 +24,18 @@ function App() {
 
   return (
     <>
-    <h1>Hi</h1>
-    <Home />
+      <h1>CP Match</h1>
+      <main>
+        <Switch>
+          <Route 
+            exact
+            path="/"
+            render={(rp) => (
+              <Home />
+            )}
+          />  
+        </Switch>
+      </main>
     </>
   );
 }
