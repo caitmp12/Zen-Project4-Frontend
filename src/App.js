@@ -46,7 +46,7 @@ function App() {
             exact
             path="/"
             render={(rp) => (
-              <Home {...rp} selectPost={selectPost}/>
+              <Home {...rp} posts={posts} selectPost={selectPost} />
             )}
           />  
         </Switch>
