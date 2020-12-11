@@ -13,7 +13,11 @@ const Home = (props) => {
         <div>
             {posts.map((post) => (
                 <>
-                    <h2>{post.title}</h2>
+                    <h2
+                    onClick={() => {
+                        props.selectPost(post)
+                        props.history.push(`/posts/${post._id}`)}}>
+                    {post.title}</h2>
                     <h4>{post.genre}</h4>
                     <p>{post.blurb}</p>
                     <ul>

@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from "./components/Home"
 import New from "./components/New"
+import Show from "./components/Show"
 
 function App() {
   const baseURL = "http://localhost:3000";
@@ -98,6 +99,14 @@ function App() {
           path="/posts/new"
           render={(rp) => (
             <New {...rp} label="create" posts={posts} selectPost={selectPost} empty={emptyPost} handleSubmit={handleCreate} />
+          )}
+          />
+          <Route 
+          exact 
+          path="/posts/:id"
+          render={(rp) => (
+            <Show {...rp} post={selectedPost}
+            />
           )}
           />
         </Switch>

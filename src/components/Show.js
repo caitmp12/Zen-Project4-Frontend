@@ -1,0 +1,21 @@
+import React from "react"
+import { Route, Link, Switch } from "react-router-dom"
+
+const Show = (props) => {
+
+    const { post } = props
+
+    return (
+        <div>
+            <h2>{post.title}</h2>
+            <h4>{post.genre}</h4>
+            <p>{post.blurb}</p>
+            <ul>
+                <li>{post.username}</li>
+                <li>{post.contact}</li>
+            </ul>
+        </div>
+    )
+}
+
+export default Show; 
