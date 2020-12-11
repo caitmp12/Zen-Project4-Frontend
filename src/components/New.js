@@ -8,7 +8,7 @@ const New = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         props.handleSubmit(formData)
-        props.history.push(`/`)
+        props.history.push("/")
     }
 
     const handleChange = (event) => {
@@ -18,7 +18,7 @@ const New = (props) => {
     return(
         <div>
             <h2>Post your WIP and find a CP!</h2>
-            <form on Submit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label>Title</label><input 
                     type="text"
