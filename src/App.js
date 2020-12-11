@@ -17,6 +17,7 @@ function App() {
 
   const [posts, setPosts] = React.useState([])
 
+  //Fetch function
   const getPosts = () => {
     fetch(`${baseURL}/posts`)
       .then((response) => response.json())
@@ -26,7 +27,7 @@ function App() {
       })
   }
 
-
+  //Use Effect Function
   React.useEffect(() => {
     getPosts()
   }, [])
@@ -36,6 +37,42 @@ function App() {
   const selectPost = (posts) => {
     setSelectedPost(posts)
   }
+
+  //Create+New function
+  const handleCreate = (newPost) => {
+    fetch(`${baseURL}/posts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPost),
+    }).then((response) => {
+      getPosts()
+    })
+  }
+
+  //Edit function
+  const handleUpdate = (post) => {
+    fetch(`${baseURL}/posts/${post._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+    }).then((response) => {
+      getPosts()
+    })
+  }
+
+  //Delete function
+  const deletePost = (post) => {
+    fetch(`${baseURL}/posts/${post._id}`, {
+      method: "DELETE",
+    }).then((response) => {
+      getPosts()
+    })
+  }
+
 
   return (
     <>
@@ -56,6 +93,12 @@ function App() {
               <Home {...rp} posts={posts} selectPost={selectPost} />
             )}
           />  
+          <Route exact 
+          path="/posts/new"
+          render={(rp) => (
+            <New {...rp} label="create" posts={posts} empty={emptyPost} handleSubmit={handleCreate} />
+          )}
+          />
         </Switch>
       </main>
     </>

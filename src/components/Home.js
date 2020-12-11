@@ -17,7 +17,7 @@ const Home = (props) => {
                     <p>{post.blurb}</p>
                     <ul>
                     <li>{post.username}</li>
-                    <li>{post.username}</li>
+                    <li>{post.contact}</li>
                     </ul>
                     
                 </>
