@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const New = (props) => {
-    const [formData, setFormData] = React.useState(props.post)
+    const [formData, setFormData] = React.useState(props.posts)
     const { posts } = props
 
     const handleSubmit = (event) => {
@@ -66,8 +66,10 @@ const New = (props) => {
                     placeholder="Contact"
                     onChange={handleChange}
                     />
-                </div>         
+                </div>  
+                <Link to={"/"}><input type="submit" value={props.label.toUpperCase()} /></Link>       
             </form>
+
         </div>
     )
 
