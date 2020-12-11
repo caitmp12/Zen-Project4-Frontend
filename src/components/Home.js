@@ -7,7 +7,23 @@ const Home = (props) => {
     console.log({posts})
 
     return (
-        <h1>Testing this thang out</h1>
+        <div>
+        <h1>Today's Posts</h1>
+        <div>
+            {posts.map((post) => (
+                <>
+                    <h2>{post.title}</h2>
+                    <h4>{post.genre}</h4>
+                    <p>{post.blurb}</p>
+                    <ul>
+                    <li>{post.username}</li>
+                    <li>{post.username}</li>
+                    </ul>
+                    
+                </>
+            ))}
+        </div>
+        </div>    
     )
 }
 

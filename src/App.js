@@ -40,6 +40,13 @@ function App() {
   return (
     <>
       <h1>CP Match</h1>
+      <ul>
+        <li>Home</li>
+        <li>Post your WIP</li>
+        <li>Critique a WIP</li>
+        <li>Sensitivity Readers</li>
+        <li>SignUp/SignIn</li>
+      </ul>
       <main>
         <Switch>
           <Route 
