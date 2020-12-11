@@ -98,17 +98,24 @@ function App() {
           <Route exact 
           path="/posts/new"
           render={(rp) => (
-            <New {...rp} label="create" posts={posts} selectPost={selectPost} empty={emptyPost} handleSubmit={handleCreate} />
+            <New {...rp} label="create" post={posts} selectPost={selectPost} empty={emptyPost} handleSubmit={handleCreate} />
           )}
           />
           <Route 
           exact 
           path="/posts/:id"
           render={(rp) => (
-            <Show {...rp} post={selectedPost}
+            <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
             />
           )}
           />
+          <Route
+            exact
+            path="/edit"
+            render={(rp) => (
+              <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
+            )}
+            />
         </Switch>
       </main>
     </>

@@ -7,6 +7,7 @@ const Show = (props) => {
 
     return (
         <div>
+            <div>
             <h2>{post.title}</h2>
             <h4>{post.genre}</h4>
             <p>{post.blurb}</p>
@@ -14,6 +15,19 @@ const Show = (props) => {
                 <li>{post.username}</li>
                 <li>{post.contact}</li>
             </ul>
+            </div>
+            <div>
+                <button
+                onClick={() => {
+                    props.selectPost(post)
+                    props.history.push(`/edit`)
+                }}>Edit</button>
+                <button
+                onClick={() => {
+                    props.deletePost(post)
+                    props.history.push(`/`)
+                }}>Delete</button>
+            </div>
         </div>
     )
 }
