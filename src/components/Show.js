@@ -20,7 +20,7 @@ const Show = (props) => {
                 <button
                 onClick={() => {
                     props.selectPost(post)
-                    props.history.push(`/edit`)
+                    props.history.push(`/edit/posts`)
                 }}>Edit</button>
                 <button
                 onClick={() => {

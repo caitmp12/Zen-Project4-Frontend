@@ -111,7 +111,7 @@ function App() {
           />
           <Route
             exact
-            path="/edit"
+            path="/edit/posts"
             render={(rp) => (
               <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
             )}

@@ -2,13 +2,13 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const New = (props) => {
-    const [formData, setFormData] = React.useState(props.posts)
-    const { posts } = props
+    const [formData, setFormData] = React.useState(props.post)
+    const { post } = props
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.handleSubmit(formData, posts)
-        props.history.push(`/posts`)
+        props.handleSubmit(formData)
+        props.history.push(`/`)
     }
 
     const handleChange = (event) => {
