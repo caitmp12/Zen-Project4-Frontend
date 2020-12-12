@@ -7,7 +7,7 @@ import New from "./components/New"
 import Show from "./components/Show"
 
 function App() {
-  const baseURL = "https://cp-match-backendp4.herokuapp.com";
+  const baseURL = "http://cp-match-backendp4.herokuapp.com/";
 
   const emptyPost = {
     title: "",
