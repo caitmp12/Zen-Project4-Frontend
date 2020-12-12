@@ -80,8 +80,8 @@ function App() {
     <>
       <h1>CP Match</h1>
       <ul>
-        <li>Home</li>
-        <li>Post your WIP</li>
+        <Link to={"/home"}><li>Home</li></Link>
+        <Link to={"/posts/new"}><li>Post your WIP</li></Link>
         <li>Critique a WIP</li>
         <li>Sensitivity Readers</li>
         <li>SignUp/SignIn</li>
@@ -90,7 +90,7 @@ function App() {
         <Switch>
           <Route 
             exact
-            path="/"
+            path="/home"
             render={(rp) => (
               <Home {...rp} posts={posts} selectPost={selectPost} />
             )}
@@ -103,17 +103,17 @@ function App() {
           />
           <Route
             exact
-            path="/posts/:id"
+            path="/posts/edit"
             render={(rp) => (
-              <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
-              />
+              <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
             )}
           />
           <Route
             exact
-            path="/edit"
+            path="/posts/:id"
             render={(rp) => (
-              <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
+              <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
+              />
             )}
           />
         </Switch>

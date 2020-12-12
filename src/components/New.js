@@ -7,7 +7,7 @@ const New = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         props.handleSubmit(formData)
-        props.history.push("/")
+        props.history.push("/home")
     }
 
     const handleChange = (event) => {
@@ -66,7 +66,7 @@ const New = (props) => {
                     onChange={handleChange}
                     />
                 </div>  
-                <Link to={"/"}><input type="submit" value={props.label} /></Link>       
+                <Link to={"/home"}><input type="submit" value={props.label} /></Link>       
             </form>
 
         </div>

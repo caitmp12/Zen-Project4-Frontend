@@ -25,7 +25,7 @@ const Show = (props) => {
                 <button
                 onClick={() => {
                     props.deletePost(post)
-                    props.history.push(`/`)
+                    props.history.push(`/home`)
                 }}>Delete</button>
             </div>
         </div>
