@@ -16,9 +16,9 @@ code {
 
 main {
   background-color: rgba(248, 250, 249, 0.947);
-  margin-left: 3%;
+  /* margin-left: 3%;
   margin-right: 3%;
-  border-radius: 3px;
+  border-radius: 3px; */
 }
 
 .header {
@@ -45,9 +45,11 @@ main {
 .posts {
   margin-top: 3%;
   margin-left: 9%;
-  margin-right: 3%; 
-  padding-bottom: 10px;
+  margin-right: 9%; 
+  padding-bottom: 5px;
+  padding-left: 10px;
   background-color: rgb(178, 211, 224, 0.2);
+  border: 1px solid rgb(196, 191, 191);
 }
 
 #today {
@@ -55,3 +57,7 @@ main {
   padding-top: 6px;
   padding-left: 6px;
 }
+
+/* #id {
+  margin-left: 10%;
+} */
