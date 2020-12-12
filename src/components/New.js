@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 const New = (props) => {
     const [formData, setFormData] = React.useState(props.post)
-    const { post } = props
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -67,7 +66,7 @@ const New = (props) => {
                     onChange={handleChange}
                     />
                 </div>  
-                <Link to={"/"}><input type="submit" value={props.label.toUpperCase()} /></Link>       
+                <Link to={"/"}><input type="submit" value={props.label} /></Link>       
             </form>
 
         </div>

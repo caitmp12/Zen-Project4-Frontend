@@ -55,7 +55,7 @@ function App() {
 
   //Edit function
   const handleUpdate = (post) => {
-    fetch(`${baseURL}/posts/${post._id}`, {
+    fetch(`${baseURL}/posts/${post.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -68,11 +68,11 @@ function App() {
 
   //Delete function
   const deletePost = (post) => {
-    fetch(`${baseURL}/posts/${post._id}`, {
+    fetch(`${baseURL}/posts/${post.id}`, {
       method: "DELETE",
-    }).then((response) => {
+    }).then((response) => 
       getPosts()
-    })
+    )
   }
 
 
@@ -101,21 +101,21 @@ function App() {
             <New {...rp} label="create" post={posts} selectPost={selectPost} empty={emptyPost} handleSubmit={handleCreate} />
           )}
           />
-          <Route 
-          exact 
-          path="/posts/:id"
-          render={(rp) => (
-            <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
-            />
-          )}
+          <Route
+            exact
+            path="/posts/:id"
+            render={(rp) => (
+              <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
+              />
+            )}
           />
           <Route
             exact
-            path="/edit/posts"
+            path="/edit"
             render={(rp) => (
               <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
             )}
-            />
+          />
         </Switch>
       </main>
     </>
