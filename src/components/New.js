@@ -15,7 +15,7 @@ const New = (props) => {
     }
 
     return(
-        <div>
+        <div class="new">
             <h2>Post your WIP and find a CP!</h2>
             <form onSubmit={handleSubmit}>
                 <div>
