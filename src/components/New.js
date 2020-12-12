@@ -4,7 +4,9 @@ import { Link } from "react-router-dom"
 const New = (props) => {
     const [formData, setFormData] = React.useState(props.post)
 
-    const {posts} = props
+    // const {posts} = props
+
+    console.log(props)
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -68,7 +70,7 @@ const New = (props) => {
                     onChange={handleChange}
                     />
                 </div>  
-                <Link to={"/home"}><input type="submit" value={props.label} /></Link>       
+                <input type="submit" value={props.label} />       
             </form>
 
         </div>

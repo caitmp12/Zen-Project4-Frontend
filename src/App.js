@@ -42,6 +42,7 @@ function App() {
 
   //Create+New function
   const handleCreate = (newPost) => {
+    console.log("handleCreate running")
     fetch(`${baseURL}/posts`, {
       method: "POST",
       headers: {
@@ -109,7 +110,7 @@ function App() {
             exact
             path="/posts/edit"
             render={(rp) => (
-              <New {...rp} label="update" selected={selectedPost} handleSubmit={handleUpdate} />
+              <New {...rp} label="update" post={selectedPost} handleSubmit={handleUpdate} />
             )}
           />
           <Route
