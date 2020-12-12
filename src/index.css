@@ -44,9 +44,8 @@ main {
 
 .new {
   background-color: rgba(248, 250, 249, 0.947);
-  margin-top: 3%;
   margin-left: 3%;
-  margin-right: 3%; 
+  margin-right: 3%;
   border-radius: 3px;
 }
 
