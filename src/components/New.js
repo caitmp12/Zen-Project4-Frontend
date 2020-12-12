@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 const New = (props) => {
     const [formData, setFormData] = React.useState(props.post)
 
+    const {posts} = props
+
     const handleSubmit = (event) => {
         event.preventDefault()
         props.handleSubmit(formData)

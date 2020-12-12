@@ -116,7 +116,7 @@ function App() {
             exact
             path="/posts/:id"
             render={(rp) => (
-              <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost}
+              <Show {...rp} post={selectedPost} selectPost={selectPost} deletePost={deletePost} posts={posts}
               />
             )}
           />
