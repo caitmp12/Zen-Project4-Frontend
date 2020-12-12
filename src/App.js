@@ -78,14 +78,18 @@ function App() {
 
   return (
     <>
-      <h1>CP Match</h1>
+      <div class="header">
+      <br/>  
+      <h1 class="title">CP Match</h1>
       <ul>
-        <Link to={"/home"}><li>Home</li></Link>
-        <Link to={"/posts/new"}><li>Post your WIP</li></Link>
-        <li>Critique a WIP</li>
-        <li>Sensitivity Readers</li>
-        <li>SignUp/SignIn</li>
+        <Link to={"/home"}><li id="nav">Home</li></Link>
+        <Link to={"/posts/new"}><li id="nav">Post your WIP</li></Link>
+        <Link to={"/home"}><li id="nav">Critique a WIP</li></Link>
+        <Link to={"/home"}><li id="nav">Sensitivity Readers</li></Link>
+        <Link to={"/home"}><li id="nav">SignUp/SignIn</li></Link>
       </ul>
+      <br/>
+      </div>
       <main>
         <Switch>
           <Route 

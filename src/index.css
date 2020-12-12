@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-05.jpg");
+  background-size: cover; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  background-color: rgba(248, 250, 249, 0.947);
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 3px;
+}
+
+.header {
+  background-color: rgba(248, 250, 249, 0.947);
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%; 
+  border-radius: 3px;
+}
+
+.title {
+  text-align: center; 
+  font-size: 80px;
+  color: rgb(101, 201, 176);
+}
+
+#nav { 
+  margin-right: 3%;
+  margin-left: 3%;
+  display: inline;
+  padding: 10px; 
+}
+
+.posts {
+  margin-top: 3%;
+  margin-left: 9%;
+  margin-right: 3%; 
+  padding-bottom: 10px;
+  background-color: rgb(178, 211, 224, 0.2);
+}
+
+#today {
+  color: rgb(101, 201, 176);
+  padding-top: 6px;
+  padding-left: 6px;
 }
